@@ -3,7 +3,15 @@
   "version": "0.0.0",
   "description": "",
   "main": "./dist/main.js",
- 
+  "exports": {
+    ".": {
+      "node": {
+        "module": "./dist/main.js",
+        "require": "./dist/main.js",
+        "import": "./dist/main.js"
+      }
+    }
+  },
   "scripts": {
     "test": "jest",
     "compile": "tsc",
@@ -14,5 +22,9 @@
   "devDependencies": {
     "jest": "^29.4.3",
     "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamBijoyKar/morse-in-one.git"
   }
 }

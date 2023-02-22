@@ -6,8 +6,8 @@ const fs = require('fs')
 
 class MorseCode{
     str:string;
-    constructor(){
-        this.str = ''
+    constructor(input:string=''){
+        this.str = input;
     }
 
     mcConvert():string{
@@ -37,6 +37,16 @@ class MorseCode{
             "outputCode": str
         }
         return obj;
+    }
+    
+    toTxt(input:string,outFile:string='output'):void{
+        const code = mcConvert(input);
+        
+        fs.writeFile(`${outFile}.txt`,code,(err:Error)=>{
+            if(err){
+                throw err;
+            }
+        })
     }
     
 }
@@ -97,4 +107,4 @@ function toTxt(input:string,outFile:string='output'):void{
 
 
 
-module.exports = {mcConvert, mcCode, mcJson, toJson, toTxt}
+module.exports = {mcConvert, mcCode, mcJson, toJson, toTxt, MorseCode}

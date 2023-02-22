@@ -4,8 +4,8 @@ const mcCode = require('./morse-code.json');
 const fs = require('fs');
 // js file system import
 class MorseCode {
-    constructor() {
-        this.str = '';
+    constructor(input = '') {
+        this.str = input;
     }
     mcConvert() {
         let ans = "";
@@ -33,6 +33,14 @@ class MorseCode {
             "outputCode": str
         };
         return obj;
+    }
+    toTxt(input, outFile = 'output') {
+        const code = mcConvert(input);
+        fs.writeFile(`${outFile}.txt`, code, (err) => {
+            if (err) {
+                throw err;
+            }
+        });
     }
 }
 // todo: it has a linear time complexcity, need more efficient algorithm
@@ -81,5 +89,5 @@ function toTxt(input, outFile = 'output') {
         }
     });
 }
-module.exports = { mcConvert, mcCode, mcJson, toJson, toTxt };
+module.exports = { mcConvert, mcCode, mcJson, toJson, toTxt, MorseCode };
 //# sourceMappingURL=main.js.map
