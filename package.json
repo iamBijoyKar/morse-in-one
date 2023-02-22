@@ -6,8 +6,8 @@
  
   "scripts": {
     "test": "jest",
-    "build": "tsc",
-    "run": "node ./dist/main.js"
+    "compile": "tsc",
+    "watch": "tsc -w"
   },
   "author": "iamBijoyKar",
   "license": "MIT",
