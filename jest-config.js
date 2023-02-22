@@ -1,3 +1,3 @@
 {
-    "testPathDirs": ["./src"]
+    "testPathDirs": ["./test"]
 }
