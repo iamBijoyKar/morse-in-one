@@ -5,11 +5,12 @@
 
 [![NPM](https://img.shields.io/npm/l/morse-in-one)](./LICENSE)
 ![npm](https://img.shields.io/npm/v/morse-in-one)
+<img alt="npm" src="https://img.shields.io/npm/dw/morse-in-one">
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/iamBijoyKar/morse-in-one/publish.yml)
 ![GitHub top language](https://img.shields.io/github/languages/top/iamBijoyKar/morse-in-one)
-![](https://img.shields.io/badge/msg-npm--package-orange)
 
-### Website Deployment Status 🚀 [![Netlify Status](https://api.netlify.com/api/v1/badges/2697554f-7da8-476e-99e5-6f4f7aa55d5e/deploy-status)](https://app.netlify.com/sites/morse-in-one/deploys)
+### Deployment Status 🚀 [![Netlify Status](https://api.netlify.com/api/v1/badges/2697554f-7da8-476e-99e5-6f4f7aa55d5e/deploy-status)](https://app.netlify.com/sites/morse-in-one/deploys)
+
 ## [✨ npm package](https://www.npmjs.com/package/morse-in-one)
 
 ##  Install 🎉
@@ -36,6 +37,7 @@ Output:
 import { mcDecode }  from 'morse-in-one';
 console.log(mcDecode('.... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--'))
 ```
+
 
 Output: 
 ```cmd
@@ -70,3 +72,4 @@ Output:
 
 ## ❤️ Visit my [GitHub Repository](https://github.com/iamBijoyKar/morse-in-one) and give a star 🌟 
 ## 😍 Contributers are warmly welcomed 👫
+
