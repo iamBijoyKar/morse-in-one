@@ -55,7 +55,36 @@ class MorseCode{
             }
         })
     }
-    
+    mcDecode():string{
+        const input = this.realStr;
+        let ans:string = "";
+        let temp:string = "";
+        for(let i=0;i<input.length;i++){
+            if(input[i] === '/'){
+                ans += " ";
+            }
+            else{
+                if(input[i]!==' '){
+                    temp += input[i];
+                }
+                else{
+                    const check = morseTo[`${temp}`];
+                    if(check !== undefined){
+                        ans += check;
+                    }
+                    temp = "";
+                }
+            }
+        }
+        ans+= morseTo[`${temp}`];//! for last character in the string
+        return ans;
+    }
+    calcMcLen():Number{
+        return this.mcCode.length;
+    }
+    calcStrLen():Number{
+        return this.realStr.length;
+    }
 }
 
 

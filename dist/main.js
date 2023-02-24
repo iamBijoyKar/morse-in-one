@@ -46,6 +46,36 @@ class MorseCode {
             }
         });
     }
+    mcDecode() {
+        const input = this.realStr;
+        let ans = "";
+        let temp = "";
+        for (let i = 0; i < input.length; i++) {
+            if (input[i] === '/') {
+                ans += " ";
+            }
+            else {
+                if (input[i] !== ' ') {
+                    temp += input[i];
+                }
+                else {
+                    const check = morseTo[`${temp}`];
+                    if (check !== undefined) {
+                        ans += check;
+                    }
+                    temp = "";
+                }
+            }
+        }
+        ans += morseTo[`${temp}`]; //! for last character in the string
+        return ans;
+    }
+    calcMcLen() {
+        return this.mcCode.length;
+    }
+    calcStrLen() {
+        return this.realStr.length;
+    }
 }
 // todo: it has a linear time complexcity, need more efficient algorithm
 function mcConvert(input) {
