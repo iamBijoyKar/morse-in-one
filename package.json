@@ -1,6 +1,6 @@
 {
   "name": "morse-in-one",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "npm package for morse code with lots of feature",
   "main": "./dist/main.js",
   "exports": {
