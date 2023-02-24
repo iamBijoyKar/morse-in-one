@@ -63,7 +63,7 @@ Output:
 |mcLen| Length of morse code of input string|
 
 
-## npm version and support 
+## 🔢 npm package version and support 
 | Version | Support | Recommended|
 |---------|--------|------------|
 |[0.0.0](https://www.npmjs.com/package/morse-in-one?activeTab=versions)| `module.export` `require`    | ❌ |
