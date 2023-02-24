@@ -3,13 +3,17 @@ const mcCode = require('./morse-code.json');
 //  *Morse Code Json import 
 const fs = require('fs');
 // js file system import
+const morseTo = require('./morse-to.json');
 class MorseCode {
     constructor(input = '') {
-        this.str = input;
+        this.realStr = input;
+        this.mcCode = this.mcConvert();
+        this.srtLen = this.realStr.length;
+        this.mcLen = this.mcCode.length;
     }
     mcConvert() {
         let ans = "";
-        let input = this.str;
+        let input = this.realStr;
         let str = String(input).toLowerCase();
         for (let i = 0; i < str.length; i++) {
             const temp = mcCode[str[i]];
@@ -26,7 +30,7 @@ class MorseCode {
         return ans;
     }
     mcJson() {
-        const input = this.str;
+        const input = this.realStr;
         let str = mcConvert(input);
         const obj = {
             "inputStr": input,
@@ -89,5 +93,28 @@ function toTxt(input, outFile = 'output') {
         }
     });
 }
-module.exports = { mcConvert, mcCode, mcJson, toJson, toTxt, MorseCode };
+function mcDecode(input) {
+    let ans = "";
+    let temp = "";
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === '/') {
+            ans += " ";
+        }
+        else {
+            if (input[i] !== ' ') {
+                temp += input[i];
+            }
+            else {
+                const check = morseTo[`${temp}`];
+                if (check !== undefined) {
+                    ans += check;
+                }
+                temp = "";
+            }
+        }
+    }
+    ans += morseTo[`${temp}`];
+    return ans;
+}
+module.exports = { mcConvert, mcCode, mcJson, toJson, toTxt, MorseCode, mcDecode };
 //# sourceMappingURL=main.js.map
