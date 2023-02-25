@@ -4,17 +4,20 @@ about: Suggest an idea for this project
 title: ''
 labels: ''
 assignees: ''
-
+name: feature-request
+about: request for a feature
+title: "[FEATURE REQUEST]"
+labels: "feature" , "work-needed"
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+# Feature ✨
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Describe the Featrue 📝
+<!-- Describe your feature elaborately -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## What problem it will solve ? 😎
+<!-- Describe here -->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Extra info 🔖
+<!-- If you want to provide extra info or something -->

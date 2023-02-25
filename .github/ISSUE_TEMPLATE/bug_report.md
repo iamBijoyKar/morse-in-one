@@ -1,38 +1,36 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
+name: bug-report
+about: report a issue or bug
+title: "[BUG REPORT]"
+labels: "bug" , "attention"
+assignees: ""
 ---
+# Confirmation ✅
+***Thank you for taking your time and reporting this bug or issue. This contribution means a lot to us. Now fill this form to help us out.***
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!-- Check these fields accordingly-->
+- [x] I am using latest version of `morse-in-one`
+- [x] I am using a version of Node that supports ESM (v14.18.0+, or v16.12.0+)
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Questions ❓
+**Required fields* 
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### What version of `morse-in-code` you are using ?*
+<!-- Answer here -->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+### What npm version you are using ?*
+<!-- Answer here -->
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+### What operating system you are using ?*
+<!-- Answer here -->
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Describe you Issue or Bug 🐞 *
+<!-- Answer here -->
 
-**Additional context**
-Add any other context about the problem here.
+## How to reproduce that Bug ? ♻
+<!-- Answer here -->
+
+## Additional Info & Media (Image or video) 📸
+<!-- If you have any additional info or want to upload screenshot of the bug then paste it here. -->
+---
+***Thank you for your time, we will work on it ASAP. If you want to contribute then view [Contributing Guidelines](../../../CONTRIBUTING.MD).***
