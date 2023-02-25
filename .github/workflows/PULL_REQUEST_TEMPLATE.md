@@ -1,10 +1,3 @@
----
-name: "pull-request-template"
-about: "make a pull request to contribute"
-label: ""
-
----
-
 # Change 👨‍🔧
 
 ## Quick checklist ✅
