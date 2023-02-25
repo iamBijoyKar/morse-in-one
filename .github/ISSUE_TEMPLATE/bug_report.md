@@ -1,9 +1,9 @@
 ---
-name: bug-report
-about: report a issue or bug
-title: "[BUG REPORT]"
-labels: "bug" , "attention"
-assignees: ""
+name: Bug Report
+about: Report an issue or bug
+title: '[BUG REPORT]'
+labels: bug , attention
+assignees: ''
 ---
 # Confirmation ✅
 ***Thank you for taking your time and reporting this bug or issue. This contribution means a lot to us. Now fill this form to help us out.***
