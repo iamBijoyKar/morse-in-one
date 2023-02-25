@@ -1,23 +1,15 @@
-name: "morse-in-one publish"
+on: push
 
-on: 
-    push:
-        branches: 
-            - master
-       
 jobs:
-    release:
-        name: morse-in-one
-        runs-on: ubuntu-latest
-            steps:
-                - name: 📚 checkout
-                uses: actions/checkout@v2.1.1
-                - name: 🟢 node
-                uses: actions/setup-node@v1.4.2
-                with:
-                    node-version: 12
-                    registry-url: https://registry.npmjs.org
-                - name: Publish
-                  run: npm publish --access public
-                  env:
-                      NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 12
+      - run: npm install
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
