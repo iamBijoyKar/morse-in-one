@@ -71,5 +71,5 @@ Output:
 |[0.0.2](https://www.npmjs.com/package/morse-in-one?activeTab=versions)| `import` `export` | ✅ |
 
 ## ❤️ Visit my [GitHub Repository](https://github.com/iamBijoyKar/morse-in-one) and give a star 🌟 
-## 😍 Contributers are warmly welcomed 👫
+## 😍 Contributors are warmly welcomed 👫
 
