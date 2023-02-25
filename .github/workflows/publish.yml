@@ -1,7 +1,14 @@
-on: [push, pull_request]
-  branches: 
-    - production 
+on: 
+  push:
+    branches: 
+      - 'production' 
 
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches: 
+      - 'production' 
 
 jobs:
   publish:
