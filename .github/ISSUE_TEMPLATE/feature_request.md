@@ -1,16 +1,10 @@
 ---
-name: Feature request
+name: Feature Request
 about: Suggest an idea for this project
-title: ''
-labels: ''
+title: '[FEATURE REQUEST]'
+labels: feature 
 assignees: ''
-name: feature-request
-about: request for a feature
-title: "[FEATURE REQUEST]"
-labels: "feature" , "work-needed"
-assignees: ""
 ---
-
 # Feature ✨
 
 ## Describe the Featrue 📝
