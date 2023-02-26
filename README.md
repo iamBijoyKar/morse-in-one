@@ -1,7 +1,7 @@
 # morse-in-one
 ***A npm package for morse code with lots of features. Encode, Decode morse code, export as JSON ot TXT files. And more....***
 
-![banner](morse-in-one.jpg)
+![banner](readme-assets/morse-in-one.jpg)
 
 [![NPM](https://img.shields.io/npm/l/morse-in-one)](./LICENSE)
 ![npm](https://img.shields.io/npm/v/morse-in-one)
