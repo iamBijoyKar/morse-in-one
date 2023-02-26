@@ -1,9 +1,12 @@
 "use strict";
+// todo: Better Comments is used 
+// !For better experience install Better Comment VS code extension
 const mcCode = require('./morse-code.json');
-//  *Morse Code Json import 
+//  *English to Morse Code Json import 
 const fs = require('fs');
 // js file system import
 const morseTo = require('./morse-to.json');
+// *Morse code to English Json import 
 class MorseCode {
     constructor(input = '') {
         this.realStr = input;
@@ -11,6 +14,7 @@ class MorseCode {
         this.srtLen = this.realStr.length;
         this.mcLen = this.mcCode.length;
     }
+    // *English to morse code method
     mcConvert() {
         let ans = "";
         let input = this.realStr;
@@ -29,6 +33,12 @@ class MorseCode {
         }
         return ans;
     }
+    // *Create a javascript object with "inputStr" and "outputCode" keys method
+    // ! JSON Structure 
+    //      {
+    //          "inputStr": "hello",
+    //          "outputCode": ".... . .-.. .-.. ---"
+    // 
     mcJson() {
         const input = this.realStr;
         let str = mcConvert(input);
@@ -38,16 +48,36 @@ class MorseCode {
         };
         return obj;
     }
-    toTxt(input, outFile = 'output') {
-        const code = mcConvert(input);
+    // *Create txt file with morse code content method
+    toTxt(outFile = 'output') {
+        const code = this.mcCode;
         fs.writeFile(`${outFile}.txt`, code, (err) => {
             if (err) {
                 throw err;
             }
         });
     }
+    // *Create a json file with "inputStr" and "outputCode" keys
+    // ! JSON Structure 
+    //      {
+    //          "inputStr": "hello",
+    //          "outputCode": ".... . .-.. .-.. ---"
+    //      }
+    toJson(outFile = 'output') {
+        const code = this.mcCode;
+        const str = `{
+            "inputStr": "${this.realStr}",
+            "outputCode": "${code}"
+        }`;
+        fs.writeFile(`${outFile}.json`, str, (err) => {
+            if (err) {
+                throw err;
+            }
+        });
+    }
+    // *Decoding method from English to morse code
     mcDecode() {
-        const input = this.realStr;
+        const input = this.mcCode;
         let ans = "";
         let temp = "";
         for (let i = 0; i < input.length; i++) {
@@ -70,11 +100,39 @@ class MorseCode {
         ans += morseTo[`${temp}`]; //! for last character in the string
         return ans;
     }
+    //* Calculate the length of morse code string
     calcMcLen() {
-        return this.mcCode.length;
+        this.mcLen = this.mcCode.length;
+        return this.mcLen;
     }
+    //* Calculate the length of input string
     calcStrLen() {
-        return this.realStr.length;
+        this.srtLen = this.realStr.length;
+        return this.srtLen;
+    }
+    // *Is the morse code legit check function 
+    isLegit() {
+        const input = this.mcCode;
+        let temp = "";
+        for (let i = 0; i < input.length; i++) {
+            if (input[i] === '/') {
+                continue;
+            }
+            if (input[i] !== ' ') {
+                temp += input[i];
+            }
+            else {
+                const check = morseTo[`${temp}`];
+                if (check === undefined) {
+                    return false;
+                }
+                temp = "";
+            }
+        }
+        if (morseTo[`${temp}`] === undefined) {
+            return false;
+        }
+        return true;
     }
 }
 // todo: it has a linear time complexcity, need more efficient algorithm
@@ -95,6 +153,12 @@ function mcConvert(input) {
     }
     return ans;
 }
+// *Create a javascript object with "inputStr" and "outputCode" keys
+// ! JSON Structure 
+//      {
+//          "inputStr": "hello",
+//          "outputCode": ".... . .-.. .-.. ---"
+//      }
 function mcJson(input) {
     let str = mcConvert(input);
     const obj = {
@@ -103,6 +167,12 @@ function mcJson(input) {
     };
     return obj;
 }
+// *Create a json file with "inputStr" and "outputCode" keys
+// ! JSON Structure 
+//      {
+//          "inputStr": "hello",
+//          "outputCode": ".... . .-.. .-.. ---"
+//      }
 function toJson(input, outFile = 'output') {
     const code = mcConvert(input);
     const str = `{
@@ -115,6 +185,7 @@ function toJson(input, outFile = 'output') {
         }
     });
 }
+// *Create txt file with morse code content function
 function toTxt(input, outFile = 'output') {
     const code = mcConvert(input);
     fs.writeFile(`${outFile}.txt`, code, (err) => {
@@ -123,6 +194,7 @@ function toTxt(input, outFile = 'output') {
         }
     });
 }
+// *Decoding function from English to morse code
 function mcDecode(input) {
     let ans = "";
     let temp = "";
@@ -146,5 +218,28 @@ function mcDecode(input) {
     ans += morseTo[`${temp}`];
     return ans;
 }
-module.exports = { mcConvert, mcCode, mcJson, toJson, toTxt, MorseCode, mcDecode };
+// *Is the morse code legit check function 
+function isLegit(input) {
+    let temp = "";
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === '/') {
+            continue;
+        }
+        if (input[i] !== ' ') {
+            temp += input[i];
+        }
+        else {
+            const check = morseTo[`${temp}`];
+            if (check === undefined) {
+                return false;
+            }
+            temp = "";
+        }
+    }
+    if (morseTo[`${temp}`] === undefined) {
+        return false;
+    }
+    return true;
+}
+module.exports = { mcConvert, mcCode, mcJson, toJson, toTxt, MorseCode, mcDecode, morseTo, isLegit };
 //# sourceMappingURL=main.js.map
