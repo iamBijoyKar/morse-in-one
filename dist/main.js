@@ -11,7 +11,7 @@ class MorseCode {
     constructor(input = '') {
         this.realStr = input;
         this.mcCode = this.mcConvert();
-        this.srtLen = this.realStr.length;
+        this.strLen = this.realStr.length;
         this.mcLen = this.mcCode.length;
     }
     // *English to morse code method
@@ -107,8 +107,8 @@ class MorseCode {
     }
     //* Calculate the length of input string
     calcStrLen() {
-        this.srtLen = this.realStr.length;
-        return this.srtLen;
+        this.strLen = this.realStr.length;
+        return this.strLen;
     }
     // *Is the morse code legit check function 
     isLegit() {

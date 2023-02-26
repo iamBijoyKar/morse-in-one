@@ -11,13 +11,13 @@ const morseTo = require('./morse-to.json');
 class MorseCode{
     realStr:string; //? Input string
     mcCode:string;  //? Generated morse code
-    srtLen:Number;  //? Length of input string 
+    strLen:Number;  //? Length of input string 
     mcLen:Number;   //? Length of generated morse code
 
     constructor(input:string=''){   // ! default input string is empty
         this.realStr = input;
         this.mcCode = this.mcConvert();
-        this.srtLen = this.realStr.length;
+        this.strLen = this.realStr.length;
         this.mcLen = this.mcCode.length;
     }
 
@@ -119,8 +119,8 @@ class MorseCode{
 
     //* Calculate the length of input string
     calcStrLen():Number{
-        this.srtLen = this.realStr.length;
-        return this.srtLen;
+        this.strLen = this.realStr.length;
+        return this.strLen;
     }
 
     // *Is the morse code legit check function 
