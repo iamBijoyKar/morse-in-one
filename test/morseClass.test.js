@@ -9,7 +9,7 @@ test('MorseCode Class Initialization',()=>{
 })
 
 test('MorseCode Class : realLen test',()=>{
-    expect(mcObj.srtLen).toBe('hello'.length);
+    expect(mcObj.strLen).toBe('hello'.length);
 })
 
 test('MorseCode Class : mcLen test',()=>{
