@@ -1,7 +1,6 @@
 on: 
-  push:
-    branches: 
-      - 'production' 
+  release:
+    types: [ created ] 
 
 jobs:
   publish:
