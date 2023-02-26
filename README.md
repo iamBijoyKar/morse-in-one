@@ -12,13 +12,13 @@
 
 ### Deployment Status 🚀 [![Netlify Status](https://api.netlify.com/api/v1/badges/2697554f-7da8-476e-99e5-6f4f7aa55d5e/deploy-status)](https://app.netlify.com/sites/morse-in-one/deploys)
 
-## [✨ npm package](https://www.npmjs.com/package/morse-in-one)
+## 🥰 View the npm package 👇
+[<img src="./readme-assets/npm-2009.png" width="200"/>](https://www.npmjs.com/package/morse-in-one)
 
 ##  Install 🎉
 
 ```cmd
-npm install morse-in-one
-npm i morse-in-one
+npm install morse-in-one 
 ```
 ## Usage 🔥
 
@@ -63,6 +63,17 @@ Output:
 |strLen| Length of input string|
 |mcLen| Length of morse code of input string|
 
+### Class Methods : 
+
+| Method | Description |
+|-----------------|-------------|
+|mcConvert( )| Encode Morse Code|
+|mcDecode( )| Decode Morse Code|
+|mcJson( )| Return Js object of Morse Code|
+|toJson( )| Create Json file|
+|toTxt( )| Create Txt file|
+|isLegit( )| Return Boolean : is it a Legit Morse code|
+
 
 ## 🔢 npm package version and support 
 | Version | Support | Recommended|
@@ -70,7 +81,10 @@ Output:
 |[0.0.0](https://www.npmjs.com/package/morse-in-one?activeTab=versions)| `module.export` `require`    | ❌ |
 |[0.0.1](https://www.npmjs.com/package/morse-in-one?activeTab=versions)| `import` `export` | ❌ |
 |[0.0.2](https://www.npmjs.com/package/morse-in-one?activeTab=versions)| `import` `export` | ✅ |
+|[0.0.3](https://www.npmjs.com/package/morse-in-one?activeTab=versions)| `import` `export` | ✅ |
 
-## ❤️ Visit my [GitHub Repository](https://github.com/iamBijoyKar/morse-in-one) and give a star 🌟 
+## For more details check the [Docs](https://morse-in-one.netlify.app/)
+
+## ❤️ Visit the project  [GitHub Repository](https://github.com/iamBijoyKar/morse-in-one) and give a star 🌟 
 ## 😍 Contributors are warmly welcomed 👫
 
