@@ -93,18 +93,17 @@ class MorseCode{
         for(let i=0;i<input.length;i++){
             if(input[i] === '/'){
                 ans += " ";
+                continue;
+            }
+            if(input[i]!==' '){
+                temp += input[i];
             }
             else{
-                if(input[i]!==' '){
-                    temp += input[i];
+                const check = morseTo[`${temp}`];
+                if(check !== undefined){
+                    ans += check;
                 }
-                else{
-                    const check = morseTo[`${temp}`];
-                    if(check !== undefined){
-                        ans += check;
-                    }
-                    temp = "";
-                }
+                temp = "";
             }
         }
         ans+= morseTo[`${temp}`];//! for last character in the string
@@ -227,18 +226,17 @@ function mcDecode(input:string):string{
     for(let i=0;i<input.length;i++){
         if(input[i] === '/'){
             ans += " ";
+            continue;
+        }
+        if(input[i]!==' '){
+            temp += input[i];
         }
         else{
-            if(input[i]!==' '){
-                temp += input[i];
+            const check = morseTo[`${temp}`];
+            if(check !== undefined){
+                ans += check;
             }
-            else{
-                const check = morseTo[`${temp}`];
-                if(check !== undefined){
-                    ans += check;
-                }
-                temp = "";
-            }
+            temp = "";
         }
     }
     ans+= morseTo[`${temp}`];
